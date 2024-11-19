@@ -1,0 +1,6 @@
+@FlightFinderApi_HostAddress = http://localhost:5140
+
+GET {{FlightFinderApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
