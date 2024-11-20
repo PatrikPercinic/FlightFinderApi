@@ -64,7 +64,7 @@ This API uses **in-memory caching** to store data for frequently repeated querie
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/FlightFinderAPI.git
+   git clone https://github.com/PatrikPercinic/FlightFinderApi.git
    ```
 2. **Navigate to the Project Directory**:
    ```bash
