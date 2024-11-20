@@ -14,13 +14,13 @@ namespace FlightFinderApi
 
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("CorsPolicy",
-                    policy =>
-                    {
-                        policy.WithOrigins("http://localhost:3000")
-                              .AllowAnyMethod()
-                              .AllowAnyHeader();
-                    });
+                options.AddPolicy("AllowSubdomains", policy =>
+                {
+                    policy.WithOrigins("https://patrikpercinic.com")
+                          .SetIsOriginAllowedToAllowWildcardSubdomains()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
             });
 
 
@@ -46,7 +46,7 @@ namespace FlightFinderApi
                 app.UseSwaggerUI();
             }
 
-            app.UseCors("CorsPolicy");
+            app.UseCors("AllowSubdomains");
 
             app.UseRouting();
 
