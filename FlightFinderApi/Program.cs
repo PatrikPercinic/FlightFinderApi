@@ -16,7 +16,7 @@ namespace FlightFinderApi
             {
                 options.AddPolicy("AllowSubdomains", policy =>
                 {
-                    policy.WithOrigins("https://patrikpercinic.com")
+                    policy.WithOrigins("https://patrikpercinic.com", "https://flightfinder.patrikpercinic.com/")
                           .SetIsOriginAllowedToAllowWildcardSubdomains()
                           .AllowAnyHeader()
                           .AllowAnyMethod();
